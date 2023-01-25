@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>T1</title>
+
+</head>
+
+<body>
+    <h1 id="heading">Click the button below to change the text and background colour</h1>
+    <button onclick="changeColor()">Change Color</button>
+    <script>
+        changeColor = () => {
+            var body = document.body;
+            body.style.backgroundColor = "hotpink";
+            var heading = document.querySelector("h1");
+            heading.innerHTML = "Colour and text changed";
+        }
+    </script>
+</body>
+
+</html>

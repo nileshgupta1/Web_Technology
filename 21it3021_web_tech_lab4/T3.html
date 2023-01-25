@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>T3</title>
+    <style>
+        .green-bg {
+            background-color: lightsalmon;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">Click the button below to change the text and background colour</h1>
+    <button onclick="changeColor()">Change Color</button>
+    <script>
+        changeColor = () => {
+            alert("Before assigning class attribute to the body");
+            var body = document.body;
+            body.className = "green-bg";
+            alert("After assigning class attribute to the body");
+            var heading = document.querySelector("h1");
+            heading.innerHTML = "Colour and text changed";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>T4</title>
+    <style>
+        .mainclass {
+            font-size: 20pt;
+            color: rgb(22, 10, 55);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">Original Heading</h1>
+    <main>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+        <div style="margin: 20px;">
+            <button onclick="changeColor()">Click me</button>
+        </div>
+    </main>
+
+    <script>
+        function changeColor() {
+            document.body.style.backgroundColor = "hotpink";
+            var main = document.querySelector("main");
+            main.className = "mainclass";
+            main.innerHTML = `Now is the winter of our discontent
+                Made glorious summer by this sun of York;
+                And all the clouds that lour'd upon our house
+                In the deep bosom of the ocean buried.
+                Now are our brows bound with victorious wreaths;
+                Our bruised arms hung up for monuments;
+                Our stern alarums changed to merry meetings,
+                Our dreadful marches to delightful measures.
+                Grim - visaged war hath smooth'd his wrinkled front;
+                And now, instead of mounting barded steeds
+                To fright the souls of fearful adversaries,
+                He capers nimbly in a lady's chamber
+                To the lascivious pleasing of a lute.`
+        }
+    </script>
+</body>
+
+</html>
