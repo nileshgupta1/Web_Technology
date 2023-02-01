@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>T5</title>
+    <style>
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        input {
+            height: 30px;
+            margin: 20px;
+        }
+
+        button {
+            padding: 15px;
+            margin: 20px;
+            border: 2px rgb(129, 111, 111) solid;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="input1">
+
+        <input type="text" id="input2">
+    </div>
+    <div class="btn">
+        <button id="addButton">+</button>
+
+        <button id="subtractButton">-</button>
+
+        <button id="multiplyButton">*</button>
+
+        <button id="divideButton">/</button>
+
+    </div>
+    <div>
+        <p id="result">Result: </p>
+    </div>
+    <script>
+        document.getElementById("addButton").addEventListener("click", function () {
+            var input1 = Number.parseInt(document.getElementById("input1").value);
+            var input2 = Number.parseInt(document.getElementById("input2").value);
+            var result = input1 + input2;
+            document.getElementById("result").innerHTML = "Result: " + result;
+        });
+
+        document.getElementById("subtractButton").addEventListener("click", function () {
+            var input1 = Number.parseInt(document.getElementById("input1").value);
+            var input2 = Number.parseInt(document.getElementById("input2").value);
+            var result = input1 - input2;
+            document.getElementById("result").innerHTML = "Result: " + result;
+        });
+
+        document.getElementById("multiplyButton").addEventListener("click", function () {
+            var input1 = Number.parseInt(document.getElementById("input1").value);
+            var input2 = Number.parseInt(document.getElementById("input2").value);
+            var result = input1 * input2;
+            document.getElementById("result").innerHTML = "Result: " + result;
+        });
+
+        document.getElementById("divideButton").addEventListener("click", function () {
+            var input1 = Number.parseInt(document.getElementById("input1").value);
+            var input2 = Number.parseInt(document.getElementById("input2").value);
+            var result = input1 / input2;
+            document.getElementById("result").innerHTML = "Result: " + result;
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>T6</title>
+</head>
+
+<body>
+    <button onclick="makePage();">Click Here</button>
+
+    <script>
+
+        var h1 = document.createElement("h1");
+        var h1Text = document.createTextNode("I am an H1");
+        h1.appendChild(h1Text);
+        document.body.appendChild(h1);
+
+        var p = document.createElement("p");
+        var pText = document.createTextNode("This is a paragraph followed by a list");
+        p.appendChild(pText);
+        document.body.appendChild(p);
+
+        var ol = document.createElement("ol");
+        ol.type = "I";
+
+        var li1 = document.createElement("li");
+        var li1Text = document.createTextNode("This is first");
+        li1.appendChild(li1Text);
+        ol.appendChild(li1);
+
+        var li2 = document.createElement("li");
+        var li2Text = document.createTextNode("This is second");
+        li2.appendChild(li2Text);
+        ol.appendChild(li2);
+
+        document.body.appendChild(ol);
+    </script>
+</body>
+
+</html>

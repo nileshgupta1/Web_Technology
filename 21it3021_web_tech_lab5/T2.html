@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>T2</title>
+    <style>
+        div {
+            margin: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="incrementButton">Increment</button>
+
+        <p id="count">20</p>
+    </div>
+
+    <script>
+        document.getElementById("incrementButton").addEventListener("click", function () {
+            var count = parseInt(document.getElementById("count").innerHTML);
+            count = count + 1;
+            document.getElementById("count").innerHTML = count;
+            document.getElementById("count").style.fontSize = count + "px";
+        });
+
+    </script>
+</body>
+
+</html>

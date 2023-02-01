@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>T7</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .show {
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label>Bill amount:</label>
+        <input type="number" id="billAmount">
+    </div>
+    <div>
+        <label>Tip percentage:</label>
+        <input type="number" id="tipPercentage">
+    </div>
+    <div>
+        <label>Number of people:</label>
+        <input type="number" id="numberOfPeople">
+    </div>
+    <div>
+        <button onclick="calculateTip()">Calculate Tip</button>
+    </div>
+    <div class="show">
+        Tip amount: <span id="tipAmount"></span>
+        Total amount: <span id="totalAmount"></span>
+        Amount per person: <span id="amountPerPerson"></span>
+    </div>
+
+    <script>
+        function calculateTip() {
+            const billAmount = Number.parseFloat(document.querySelector("#billAmount").value);
+            const tipPercentage = Number.parseFloat(document.querySelector("#tipPercentage").value) / 100;
+            const numberOfPeople = Number.parseInt(document.querySelector("#numberOfPeople").value);
+            const tipAmount = billAmount * tipPercentage;
+            const totalAmount = billAmount + tipAmount;
+            const amountPerPerson = totalAmount / numberOfPeople;
+
+            document.querySelector("#tipAmount").innerText = tipAmount.toFixed(2);
+            document.querySelector("#totalAmount").innerText = totalAmount.toFixed(2);
+            document.querySelector("#amountPerPerson").innerText = amountPerPerson.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

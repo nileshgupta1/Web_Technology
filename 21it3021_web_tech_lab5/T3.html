@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>T3</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="buttonid">Increment Count</button>
+    <ul id="listid"></ul>
+
+    <script>
+        const button = document.querySelector("#buttonid");
+        const countList = document.querySelector("#listid");
+        let countValue = 0;
+
+        button.addEventListener("click", function () {
+            countValue++;
+            const listItem = document.createElement("li");
+            listItem.textContent = countValue;
+            listItem.style.fontSize = 25 + countValue + "px";
+            countList.appendChild(listItem);
+        });
+    </script>
+</body>
+
+</html>

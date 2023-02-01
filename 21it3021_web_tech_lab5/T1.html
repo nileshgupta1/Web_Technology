@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>T1</title>
+    <style>
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            margin: 100px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #replaceButton {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2 id="hello">Hello</h2>
+
+        <input type="text" id="inputBox">
+
+        <button id="replaceButton">Replace</button>
+    </div>
+
+    <script>
+        document.getElementById("replaceButton").addEventListener("click", function () {
+            var input = document.getElementById("inputBox").value;
+            document.getElementById("hello").innerHTML = input;
+        });
+
+    </script>
+
+</body>
+
+</html>

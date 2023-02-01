@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="addRow">Add Row</button>
+    <table id="tableid">
+        <tr>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <script>
+        const button = document.querySelector("#addRow");
+        const table = document.querySelector("#tableid");
+
+        button.addEventListener("click", function () {
+            const lastRow = table.lastChild;
+            const secondLastRow = lastRow.previousSibling;
+            const lastValue = parseInt(lastRow.lastChild.innerText);
+            const secondLastValue = parseInt(secondLastRow.lastChild.innerText);
+            const newRow = document.createElement("tr");
+            const valueCell = document.createElement("td");
+
+            // valueCell.innerHTML = lastValue + secondLastValue;
+            valueCell.innerHTML = lastValue + secondLastValue;
+            newRow.appendChild(valueCell);
+            table.appendChild(newRow);
+        });
+    </script>
+</body>
+
+</html>
